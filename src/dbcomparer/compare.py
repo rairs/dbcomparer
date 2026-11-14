@@ -125,8 +125,15 @@ def _compare_schema(s_eng, t_eng, schema, include, exclude, strict_types, ignore
 
     for table in sorted(s_tables & t_tables):
         td = TableSchemaDiff(table=table)
+        s_pk = si.get_pk_constraint(table, schema=schema).get("constrained_columns") or []
+        t_pk = ti.get_pk_constraint(table, schema=schema).get("constrained_columns") or []
         s_cols = {c["name"]: _column_info(c, strict_types) for c in si.get_columns(table, schema=schema)}
         t_cols = {c["name"]: _column_info(c, strict_types) for c in ti.get_columns(table, schema=schema)}
+        # Primary-key columns are NOT NULL by definition; some dialects (SQLite) report otherwise.
+        for cols, pk in ((s_cols, s_pk), (t_cols, t_pk)):
+            for name in pk:
+                if name in cols:
+                    cols[name]["nullable"] = False
         for name in sorted(t_cols.keys() - s_cols.keys()):
             td.columns.append(ColumnDiff(name, "added", target=t_cols[name]))
         for name in sorted(s_cols.keys() - t_cols.keys()):
@@ -135,8 +142,6 @@ def _compare_schema(s_eng, t_eng, schema, include, exclude, strict_types, ignore
             if s_cols[name] != t_cols[name]:
                 td.columns.append(ColumnDiff(name, "changed", s_cols[name], t_cols[name]))
 
-        s_pk = si.get_pk_constraint(table, schema=schema).get("constrained_columns") or []
-        t_pk = ti.get_pk_constraint(table, schema=schema).get("constrained_columns") or []
         if list(s_pk) != list(t_pk):
             td.primary_key = (list(s_pk), list(t_pk))
 

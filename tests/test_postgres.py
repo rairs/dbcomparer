@@ -6,6 +6,7 @@ import pytest
 import sqlalchemy as sa
 
 from dbcomparer import compare_databases
+from dbcomparer.report import to_markdown
 
 PG_URL = os.environ.get("DBCOMPARER_PG_URL")
 pytestmark = pytest.mark.skipif(not PG_URL, reason="DBCOMPARER_PG_URL not set")
@@ -27,7 +28,7 @@ def test_postgres_vs_sqlite(tmp_path):
             )
     try:
         res = compare_databases(pg, lite, include=["xeng"])
-        assert not res.has_differences, res.to_dict()
+        assert not res.has_differences, to_markdown(res)
         with lite.begin() as c:
             c.exec_driver_sql("UPDATE xeng SET amt = 9 WHERE id = 2")
         res = compare_databases(pg, lite, include=["xeng"], schema_only=False)
