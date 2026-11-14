@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dbcomparer"
+dynamic = ["version"]
+description = "Compare the schema and data of any two SQL databases (SQLite, PostgreSQL, MySQL, SQL Server, Oracle, DuckDB, ...)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Rakesh" }]
+keywords = ["database", "diff", "schema", "comparison", "sqlalchemy", "reproducibility", "data-validation"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Database",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = ["SQLAlchemy>=2.0"]
+
+[project.optional-dependencies]
+postgres = ["psycopg[binary]>=3.1"]
+mysql = ["PyMySQL>=1.1"]
+mssql = ["pyodbc>=5"]
+duckdb = ["duckdb-engine>=0.11"]
+test = ["pytest>=7", "pytest-cov>=4"]
+dev = ["dbcomparer[test]", "ruff>=0.4"]
+
+[project.scripts]
+dbcomparer = "dbcomparer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/OWNER/dbcomparer"
+Issues = "https://github.com/OWNER/dbcomparer/issues"
+
+[tool.hatch.version]
+path = "src/dbcomparer/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dbcomparer"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["UP007"]
