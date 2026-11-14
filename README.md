@@ -1,6 +1,7 @@
 # dbcomparer
 
 [![CI](https://github.com/rairs/dbcomparer/actions/workflows/ci.yml/badge.svg)](https://github.com/rairs/dbcomparer/actions/workflows/ci.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24213701.svg)](https://doi.org/10.5281/zenodo.24213701)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **dbcomparer** compares the *schema* and *data* of any two SQL databases that

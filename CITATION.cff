@@ -7,6 +7,14 @@ authors:
     family-names: Rai
     orcid: "https://orcid.org/0009-0009-5110-3230"
 version: 0.1.0
+doi: 10.5281/zenodo.24213701
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24213701
+    description: "All versions (concept DOI)"
+  - type: doi
+    value: 10.5281/zenodo.24213702
+    description: "Version 0.1.0"
 date-released: 2026-11-14
 license: MIT
 repository-code: "https://github.com/rairs/dbcomparer"
