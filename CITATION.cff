@@ -5,7 +5,7 @@ abstract: "Engine-agnostic schema and data comparison for relational databases."
 authors:
   - given-names: Rakesh S
     family-names: Rai
-    # orcid: https://orcid.org/0000-0000-0000-0000
+    orcid: "https://orcid.org/0009-0009-5110-3230"
 version: 0.1.0
 date-released: 2026-11-14
 license: MIT

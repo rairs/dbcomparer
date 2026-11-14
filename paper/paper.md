@@ -8,7 +8,7 @@ tags:
   - SQL
 authors:
   - name: Rakesh S Rai
-    orcid: 0000-0000-0000-0000  # TODO: your ORCID
+    orcid: 0009-0009-5110-3230
     affiliation: 1
 affiliations:
   - name: TODO Institution, Country
