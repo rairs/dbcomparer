@@ -31,10 +31,10 @@ hand-off between collaborators.
 ## Installation
 
 ```bash
-pip install dbcomparer                 # SQLite works out of the box
-pip install "dbcomparer[postgres]"     # + PostgreSQL driver
-pip install "dbcomparer[mysql]"        # + MySQL/MariaDB driver
-pip install "dbcomparer[duckdb]"       # + DuckDB
+pip install git+https://github.com/rairs/dbcomparer   # SQLite works out of the box
+pip install "dbcomparer[postgres] @ git+https://github.com/rairs/dbcomparer"  # + PostgreSQL driver
+pip install "dbcomparer[mysql] @ git+https://github.com/rairs/dbcomparer"  # + MySQL/MariaDB driver
+pip install "dbcomparer[duckdb] @ git+https://github.com/rairs/dbcomparer"  # + DuckDB
 ```
 
 From source:

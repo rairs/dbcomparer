@@ -9,3 +9,11 @@ build/
 .ruff_cache/
 *.db
 paper/paper.pdf
+paper/arxiv/*.aux
+paper/arxiv/*.log
+paper/arxiv/*.out
+paper/arxiv/*.fls
+paper/arxiv/*.fdb_latexmk
+paper/arxiv/*.blg
+paper/arxiv/*.bbl
+paper/arxiv/*.pdf
