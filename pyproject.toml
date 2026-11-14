@@ -35,8 +35,8 @@ dev = ["dbcomparer[test]", "ruff>=0.4"]
 dbcomparer = "dbcomparer.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/OWNER/dbcomparer"
-Issues = "https://github.com/OWNER/dbcomparer/issues"
+Homepage = "https://github.com/rairs/dbcomparer"
+Issues = "https://github.com/rairs/dbcomparer/issues"
 
 [tool.hatch.version]
 path = "src/dbcomparer/__init__.py"

@@ -1,6 +1,6 @@
 # dbcomparer
 
-[![CI](https://github.com/OWNER/dbcomparer/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/dbcomparer/actions/workflows/ci.yml)
+[![CI](https://github.com/rairs/dbcomparer/actions/workflows/ci.yml/badge.svg)](https://github.com/rairs/dbcomparer/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **dbcomparer** compares the *schema* and *data* of any two SQL databases that
@@ -39,7 +39,7 @@ pip install "dbcomparer[duckdb]"       # + DuckDB
 From source:
 
 ```bash
-git clone https://github.com/OWNER/dbcomparer && cd dbcomparer
+git clone https://github.com/rairs/dbcomparer && cd dbcomparer
 pip install -e ".[dev]"
 ```
 

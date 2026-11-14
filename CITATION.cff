@@ -9,7 +9,7 @@ authors:
 version: 0.1.0
 date-released: 2026-11-14
 license: MIT
-repository-code: "https://github.com/OWNER/dbcomparer"
+repository-code: "https://github.com/rairs/dbcomparer"
 keywords: [database, diff, schema, reproducibility, sqlalchemy]
 references:
   - type: article

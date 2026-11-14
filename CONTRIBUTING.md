@@ -4,14 +4,14 @@ Thanks for your interest!
 
 ## Reporting bugs and asking for help
 
-Open an issue at https://github.com/OWNER/dbcomparer/issues. Include the
+Open an issue at https://github.com/rairs/dbcomparer/issues. Include the
 dbcomparer version, the database engines and versions, the command you ran,
 and the output you got. Questions are welcome as issues too.
 
 ## Development setup
 
 ```bash
-git clone https://github.com/OWNER/dbcomparer && cd dbcomparer
+git clone https://github.com/rairs/dbcomparer && cd dbcomparer
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 pytest
