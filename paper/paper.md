@@ -11,7 +11,7 @@ authors:
     orcid: 0009-0009-5110-3230
     affiliation: 1
 affiliations:
-  - name: TODO Institution, Country
+  - name: Independent Researcher, USA
     index: 1
 date: 14 November 2026
 bibliography: paper.bib
