@@ -79,6 +79,16 @@ is capped so that reports stay readable.
 
 # Acknowledgements
 
-TODO.
+This work received no external funding and was carried out as independent
+research. I thank the maintainers of SQLAlchemy, whose dialect and
+inspection APIs make engine-agnostic comparison possible, and the
+maintainers of the open-source database drivers used in testing.
+
+# AI usage disclosure
+
+Generative AI (Claude, Anthropic) was used to help draft parts of the source
+code, tests, documentation and this manuscript. The author reviewed, tested
+and edited all AI-assisted output and takes full responsibility for the
+content of the software and the paper.
 
 # References
