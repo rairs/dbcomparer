@@ -3,11 +3,24 @@ message: "If you use this software, please cite it as below."
 title: "dbcomparer"
 abstract: "Engine-agnostic schema and data comparison for relational databases."
 authors:
-  - given-names: Rakesh
-    # family-names: TODO
+  - given-names: Rakesh S
+    family-names: Rai
     # orcid: https://orcid.org/0000-0000-0000-0000
 version: 0.1.0
 date-released: 2026-11-14
 license: MIT
 repository-code: "https://github.com/OWNER/dbcomparer"
 keywords: [database, diff, schema, reproducibility, sqlalchemy]
+references:
+  - type: article
+    title: "Universal Database Comparison Framework"
+    authors:
+      - given-names: Rakesh S
+        family-names: Rai
+    journal: "International Journal of Creative Research Thoughts"
+    volume: 14
+    issue: 3
+    start: e436
+    end: e441
+    year: 2026
+    doi: 10.56975/ijcrt.v14i3.303410

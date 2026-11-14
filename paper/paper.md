@@ -7,7 +7,7 @@ tags:
   - data validation
   - SQL
 authors:
-  - name: Rakesh  # TODO: full name
+  - name: Rakesh S Rai
     orcid: 0000-0000-0000-0000  # TODO: your ORCID
     affiliation: 1
 affiliations:
@@ -56,7 +56,11 @@ one pass, (ii) normalises types and values across drivers so that a
 cross-engine comparison is not drowned in spurious differences, (iii)
 handles tables without primary keys by multiset comparison, and (iv)
 returns machine-readable results that can be checked into a research record
-or asserted on in a test suite.
+or asserted on in a test suite. The comparison approach builds on the
+universal database comparison framework described in @rai2026universal,
+which normalises records from heterogeneous database systems into a common
+representation; `dbcomparer` provides an open, tested, installable
+implementation of these ideas for SQL databases.
 
 # Design
 

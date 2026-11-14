@@ -104,7 +104,10 @@ Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) and the
 ## Citation
 
 If you use dbcomparer in research, please cite it using [CITATION.cff](CITATION.cff)
-(and the JOSS paper once it is published).
+(and the JOSS paper once it is published). The underlying approach is described in:
+
+> Rai, R. S. (2026). Universal Database Comparison Framework. *International Journal
+> of Creative Research Thoughts*, 14(3), e436–e441. https://doi.org/10.56975/ijcrt.v14i3.303410
 
 ## License
 
