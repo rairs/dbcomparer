@@ -1,6 +1,7 @@
 name: JOSS paper draft
 
 on:
+  workflow_dispatch:
   push:
     paths: ["paper/**", ".github/workflows/draft-pdf.yml"]
 
